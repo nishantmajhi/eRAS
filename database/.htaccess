@@ -1,0 +1,14 @@
+# The seeders are plain PHP under the document root, so on a deployed instance
+# anyone could request database/seed.php and re-run them — which drops nothing
+# but does insert the demo accounts, including an admin whose password is
+# printed in database/seeders/users.php.
+#
+# Apache only. On a host that ignores .htaccess (nginx, or Apache with
+# AllowOverride None), do not deploy this directory at all.
+Require all denied
+
+# Apache 2.2 and earlier.
+<IfModule !mod_authz_core.c>
+  Order allow,deny
+  Deny from all
+</IfModule>

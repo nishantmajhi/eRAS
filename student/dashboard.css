@@ -1,0 +1,59 @@
+nav {
+  margin-block: 2rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  color: var(--accent-color);
+  background-color: transparent;
+}
+button:focus,
+button:hover {
+  color: var(--auxiliary-color);
+}
+
+table {
+  margin: 0 auto;
+}
+
+@media (orientation: landscape) {
+  nav {
+    gap: 1.25rem;
+  }
+
+  #info,
+  button {
+    font-size: 1.5rem;
+  }
+
+  th,
+  td {
+    width: 6rem;
+  }
+
+  th {
+    height: 3rem;
+  }
+  td {
+    height: 2.5rem;
+  }
+}
+
+@media (orientation: portrait) {
+  nav {
+    gap: 0.5rem;
+  }
+
+  #info,
+  button {
+    font-size: 1.25rem;
+  }
+
+  th,
+  td {
+    padding: 0.5ch 0.25ch;
+    width: 4.5ch;
+  }
+}

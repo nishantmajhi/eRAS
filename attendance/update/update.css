@@ -1,0 +1,60 @@
+main {
+  padding: 0rem 4rem 2rem 4rem;
+  box-sizing: border-box;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-weight: normal;
+}
+
+.title:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 2px;
+  width: 10ch;
+  transition: 0.5s ease-out;
+  background: var(--primary-color);
+}
+
+.title:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+  transform-origin: bottom left;
+  width: 16ch;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+th {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+td {
+  padding: 0.25rem 1rem;
+  font-size: 0.96rem;
+}
+
+tfoot * {
+  padding: 0.6rem 0;
+}
+
+@media (orientation: landscape) {
+  th,
+  td {
+    padding-inline: 2rem;
+  }
+
+  td:nth-child(2) {
+    width: 20dvw;
+  }
+}

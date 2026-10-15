@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" />
+    <title>Print Attendance | eRAS - MMC</title>
+
+    <link rel="stylesheet" href="print.css" />
+
+    <script src="changeDate.js"></script>
+    <script src="print.js"></script>
+  </head>
+  <body>
+    <aside>
+      <label>
+        Select date:
+        <input
+          type="date"
+          name="date"
+          min="{{FIRST_DAY}}"
+          max="{{TODAY}}"
+          value="{{TODAY}}"
+        />
+      </label>
+    </aside>
+    <main>
+      <header>
+        <section>
+          <img src="../../assets/img/TU-Logo.svg.png" alt="TU Logo" />
+          <article>
+            <h1>Mechi Multiple Campus</h1>
+            <address>Bhadrapur, Jhapa</address>
+          </article>
+        </section>
+        <section>
+          <p class="rightAlign">Attendance from: <b>{{CREATED_ON}}</b></p>
+          <p class="rightAlign">Attendance of: <b>{{COURSE_CODE}}</b></p>
+        </section>
+      </header>
+      <section id="attendanceInfo">
+        <article class="leftAlign">
+          <h3>Faculty:</h3>
+          <span>{{PROGRAM}}</span>
+        </article>
+        <article class="rightAlign">
+          <h3>Semester:</h3>
+          <span>{{SEMESTER_NO}}</span>
+        </article>
+        <article class="leftAlign">
+          <h3>Subject:</h3>
+          <span>{{COURSE_TITLE}}</span>
+        </article>
+        <article class="rightAlign">
+          <h3>Section:</h3>
+          <span>{{SECTION}}</span>
+        </article>
+      </section>
+
+      <table>
+        <thead>
+          <tr>
+            <th>S No.</th>
+            <th>Name</th>
+            <th>Attendance</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ATTENDANCE_TBODY}}
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <button type="button">🖨️</button>
+    </footer>
+  </body>
+</html>

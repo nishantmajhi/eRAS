@@ -1,0 +1,135 @@
+:root {
+    accent-color: #2b6eb5;
+}
+
+body {
+    margin: 0;
+}
+
+aside {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+}
+aside > label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    padding-block: 2rem;
+    width: 7in; /* A4 size paper is 7 inch wide */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header > section:first-child {
+    display: flex;
+    gap: 1rem;
+}
+img {
+    height: 4.5rem;
+    width: auto;
+    filter: grayscale(100%);
+}
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+address {
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+header > section:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+p {
+    margin: 0;
+}
+.rightAlign {
+    text-align: right;
+}
+
+#attendanceInfo {
+    margin-block: 2rem 0.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.leftFlex {
+    display: flex;
+    justify-content: flex-start;
+}
+.rightFlex {
+    display: flex;
+    justify-content: flex-end;
+}
+h3 {
+    display: inline;
+    font-size: 1.1rem;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    text-align: left;
+    background-color: lightgrey;
+}
+
+tr {
+    border-bottom: 1px solid lightgrey;
+}
+
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+th {
+    padding: 0.1rem 1rem;
+    font-size: 1.1rem;
+}
+td {
+    padding: 0rem 1rem;
+    font-size: 1rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+button {
+    border: transparent;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    background-color: transparent;
+    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+button:focus,
+button:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+button:active {
+    transform: scale(90%);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}

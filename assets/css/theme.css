@@ -1,0 +1,194 @@
+:root {
+  accent-color: #00aff0;
+  --accent-color: #2b6eb5;
+  --main-color: white;
+  --primary-color: black;
+  --secondary-color: #00aff0;
+  --tertiary-color: #f36710;
+  --auxiliary-color: #ee161f;
+  --out_of_focus-color: rgba(100, 100, 100, 0.4);
+  --container-border_radius: 1.6rem;
+  --input-border_radius: 0.4rem;
+  --input-padding: 0.8rem;
+  --transition-time: 0.3s;
+  --h1-size: 2rem;
+  --h2-size: 1.6rem;
+  --h3-size: 1.2rem;
+  --header-shadow: 0px 0.1rem 0.2rem rgba(0, 0, 0, 0.24);
+  --article-shadow: 0 0.4rem 0.8rem rgba(0, 2, 4, 0.2);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif, system;
+}
+
+header {
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--header-shadow);
+  background-color: var(--main-color);
+}
+
+header > figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header > figure img {
+  height: calc(var(--h2-size) * 2 + 1rem);
+  width: auto;
+}
+
+@media (orientation: landscape) {
+  header > figure::after {
+    content: "Mechi Multiple Campus";
+  }
+}
+@media (orientation: portrait) {
+  header > figure::after {
+    content: "MMC";
+  }
+}
+header > figure::after {
+  font-size: var(--h1-size);
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+header > button {
+  font-size: large;
+  font-weight: bold;
+  color: var(--accent-color);
+  background-color: transparent;
+}
+header > button:focus,
+header > button:hover {
+  color: var(--auxiliary-color);
+}
+
+#breadcrumbs {
+  padding: 0.5rem 1rem;
+}
+
+#breadcrumbs > span {
+  padding-inline: 0.5rem;
+  font-size: 0.9rem;
+}
+
+#breadcrumbs > span:first-child {
+  padding-left: 0;
+}
+
+#breadcrumbs > span:not(:last-child) {
+  border-right: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: font-size var(--transition-time),
+    text-decoration var(--transition-time);
+}
+#breadcrumbs > span:not(:last-child):focus,
+#breadcrumbs > span:not(:last-child):hover {
+  font-size: 0.95rem;
+  text-decoration: underline;
+}
+#breadcrumbs > span:active {
+  font-size: 0.9rem;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  width: max-content;
+  color: var(--main-color);
+}
+
+.positive_button {
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--main-color);
+  background-color: var(--primary-color);
+  transition: background-color var(--transition-time),
+    transform var(--transition-time);
+}
+.positive_button:focus,
+.positive_button:hover {
+  background-color: var(--auxiliary-color);
+}
+.positive_button:active {
+  background-color: var(--tertiary-color);
+  transform: scale(90%);
+}
+
+.transparent_button {
+  border: 1px solid var(--out_of_focus-color);
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  background-color: transparent;
+  transition: transform 0.2s, color var(--transition-time),
+    border var(--transition-time), background-color var(--transition-time);
+}
+.transparent_button:hover,
+.transparent_button:focus {
+  border-color: hsl(220, 5%, 25%);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.transparent_button:active {
+  transform: scale(92%);
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+h2 {
+  font-size: var(--h2-size);
+}
+h3 {
+  font-size: var(--h3-size);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: color var(--transition-time);
+}
+a:focus,
+a:hover {
+  color: var(--auxiliary-color);
+}
+
+select,
+button {
+  font-size: 0.9rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--out_of_focus-color);
+}
+
+th,
+td {
+  border: 1px solid var(--primary-color);
+  vertical-align: middle;
+  text-align: center;
+}
+
+th {
+  color: var(--placeholder-color);
+}
+
+tfoot * {
+  text-align: end;
+  border: none;
+}

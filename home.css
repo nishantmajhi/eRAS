@@ -1,0 +1,64 @@
+main {
+  border-radius: var(--container-border_radius);
+  padding: 3rem 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--main-color);
+  box-shadow: var(--header-shadow);
+}
+
+figure {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+figure img {
+  height: calc(var(--h1-size) * 2 + 1rem);
+  width: auto;
+}
+
+figure figcaption {
+  font-size: var(--h1-size);
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 0;
+}
+
+form > input {
+  border: 1px solid var(--primary-color);
+  border-radius: var(--input-border_radius);
+  padding: var(--input-padding);
+  width: 24ch;
+  font-size: 1rem;
+}
+
+form > button {
+  border-radius: 0.8rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--accent-color);
+  transition: var(--transition-time);
+}
+form > button:focus,
+form > button:hover {
+  background-color: var(--tertiary-color);
+}
+
+#error_message {
+  color: var(--auxiliary-color);
+}

@@ -1,0 +1,40 @@
+:root {
+  --linear-gradient-for-animation: linear-gradient(
+    45deg,
+    orange,
+    #f36710,
+    #ee161f,
+    #f36710,
+    crimson,
+    #f36710,
+    #ee161f,
+    #f36710,
+    orange
+  );
+}
+
+.hero-text {
+  margin: 0;
+  display: inline-block;
+  width: 100dvw;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 5rem;
+  color: transparent;
+  background-clip: text;
+  background-size: 180% auto;
+  background-image: var(--linear-gradient-for-animation);
+  animation: linear_gradient_animation 20s alternate infinite;
+}
+
+@keyframes linear_gradient_animation {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}

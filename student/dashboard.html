@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>Student Dashboard | eRAS - MMC</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="../assets/css/theme.css" />
+    <link rel="stylesheet" href="../assets/css/dialog.css" />
+
+    <script src="dashboard.js"></script>
+    <script src="render.js"></script>
+    <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/dialog.js"></script>
+  </head>
+  <body>
+    <header>
+      <figure>
+        <img src="../assets/img/TU-Logo.svg.png" alt="TU Logo" />
+      </figure>
+      <button type="button">Log out</button>
+    </header>
+    <main>
+      <!-- calendar will be generated here -->
+    </main>
+    <input type="hidden" name="fullDate" value="{{FULL_DATE}}" />
+  </body>
+</html>

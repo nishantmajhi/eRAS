@@ -1,0 +1,78 @@
+main {
+  padding: 0rem 4rem 2rem 4rem;
+  box-sizing: border-box;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-weight: normal;
+}
+.title:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  height: 2px;
+  width: 10ch;
+  transition: 0.5s ease-out;
+  background: var(--primary-color);
+}
+.title:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+  transform-origin: bottom left;
+  width: 16ch;
+}
+
+nav {
+  margin-block: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav article {
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  box-shadow: var(--article-shadow);
+  transition: transform var(--transition-time);
+}
+nav article:focus,
+nav article:hover {
+  transform:scale(108%);
+}
+nav article:active {
+  transform:scale(100%);
+}
+
+nav article:focus > hgroup,
+nav article:hover > hgroup {
+  color: var(--auxiliary-color);
+}
+
+nav img {
+  height: calc(var(--h2-size) * 2 + 1rem);
+}
+
+hgroup {
+  color: var(--accent-color);
+}
+
+hgroup  h3 {
+  margin-block: 0 0.6rem;
+  width: max-content;
+}
+
+hgroup h4 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.Nepali {
+  font-weight: normal;
+}

@@ -1,0 +1,9 @@
+# Real credentials. Copy .ENV.example to .ENV and fill it in locally.
+.ENV
+.env
+
+# Editor and OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

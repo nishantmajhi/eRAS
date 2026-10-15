@@ -1,0 +1,45 @@
+.modal {
+    margin: 0;
+    border: transparent;
+    border-radius: 0.8rem;
+    padding: 2.5rem 2.75rem;
+    position: absolute;
+    inset: 50% 0 0 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-color);
+}
+
+@media(orientation: landscape) {
+    .modal {
+        min-width: 24dvw;
+    }
+}
+
+@media(orientation: portrait) {
+    .modal {
+        min-width: 50dvw;
+    }
+}
+
+.modal #title {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+.modal #message {
+    margin-block: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.modal #actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+dialog::backdrop {
+    background: rgba(160, 160, 160, 0.8);
+}
